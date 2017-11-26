@@ -1,0 +1,1 @@
+C:\Python27\Scripts\pyside-uic.exe -o wizaster_ui.py untitled_vertical.ui
