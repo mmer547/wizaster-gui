@@ -1,1 +1,1 @@
-python wizaster_main.py
+python bin\wizaster_main.py

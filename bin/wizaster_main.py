@@ -139,10 +139,9 @@ class MainWindow(QtGui.QMainWindow, Ui_MainWindow):
         run_button(ui)
         
 #------------------------------------------------------------------------------ 
-## GUIの起動
 def main():
     app = QtGui.QApplication(sys.argv)
-    app.setStyle('plastique')    # ← ここでスタイルを指定
+    app.setStyle('plastique')
     ui = MainWindow()
     ui.show()
     sys.exit(app.exec_())
