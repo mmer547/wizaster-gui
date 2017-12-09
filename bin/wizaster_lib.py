@@ -19,7 +19,6 @@ def ms_ref(ui):
 
 
 def fw_ref(ui):
-    # comm_name = QtGui.QFileDialog.getExistingDirectory()
     comm_name = QtGui.QFileDialog.getSaveFileName()
     ui.fw_edit.setText(comm_name[0])
 
@@ -47,21 +46,25 @@ def output_comm(ui):
 def run_aster(folder_path, command):
     pwd = os.getcwd()
     os.chdir(folder_path)
-    print(os.getcwd())
     run_com = [command, 'export']
     cmd = ' '.join(run_com)
-    print(cmd)
     try:
         sp.check_call(cmd)
     except:
-        pass
+        QtGui.QMessageBox.information(
+            None,
+            "Error!",
+            "Calculation is not ended!",
+            QtGui.QMessageBox.Close
+            )
+    else:
+        QtGui.QMessageBox.information(
+            None,
+            "Successful!",
+            "Calculation ended usually!",
+            QtGui.QMessageBox.Close
+            )
     os.chdir(pwd)
-    QtGui.QMessageBox.information(
-        None,
-        "Successful!",
-        "Calculation ended usually!",
-        QtGui.QMessageBox.Close
-        )
 
 
 def run_button(ui):
