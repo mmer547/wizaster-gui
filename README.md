@@ -11,7 +11,7 @@ You change a file path on config.ini.
 You click wizaster.bat. GUI started.
 
 
-Prerequisite:
+# Prerequisite:
   Python 2.7.13 or later
   PySide 1.2.4
   Code-Aster 13.4 for Windows
